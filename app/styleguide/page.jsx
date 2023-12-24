@@ -1,4 +1,5 @@
-import Button from "@/components/UI/Button";
+import Button from '@/components/UI/Button'
+import Tag from '@/components/UI/Tag'
 
 export default function StyleguidePage() {
   return (
@@ -33,10 +34,10 @@ export default function StyleguidePage() {
         </div>
       </div>
       <div>
-        <span className="block pb-5">Typography</span>
-        <div className="flex gap-5">
-          <Button>Dark</Button>
-          <button className="btn-light">Light</button>
+        <span className="block pb-5">Components</span>
+        <div className="flex gap-5 items-baseline">
+          <Button>Button</Button>
+          <Tag>Tag</Tag>
         </div>
       </div>
     </div>
