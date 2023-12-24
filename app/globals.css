@@ -4,6 +4,37 @@
 
 @layer components {
   .container {
-    @apply px-34
+    @apply px-10;
+  }
+  .title-xl {
+    @apply text-[102px] leading-[1.1];
+  }
+  .title-lg {
+    @apply text-[74px] leading-[1.1];
+  }
+  .title-md {
+    @apply text-[64px] leading-[1.1];
+  }
+  .title-sm {
+    @apply text-[44px] leading-[1.1];
+  }
+  .title-xs {
+    @apply text-[26px] leading-[1.1];
+  }
+
+  .body-xl {
+    @apply text-[24px] leading-[1.4];
+  }
+  .body-lg {
+    @apply text-[18px] leading-[1.4];
+  }
+  .body-md {
+    @apply text-[16px] leading-[1.4];
+  }
+  .body-sm {
+    @apply text-[14px] leading-[1.4];
+  }
+  .body-xs {
+    @apply text-[12px] leading-[1.4];
   }
 }
