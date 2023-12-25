@@ -11,6 +11,17 @@ type HomepageDocumentDataSlicesSlice = never;
  */
 interface HomepageDocumentData {
   /**
+   * title field in *homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *homepage*
    *
    * - **Field Type**: Slice Zone
