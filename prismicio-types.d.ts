@@ -4,6 +4,61 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *homepage → Grid*
+ */
+export interface HomepageDocumentDataGridItem {
+  /**
+   * image field in *homepage → Grid*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.grid[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *homepage → Grid*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.grid[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * text field in *homepage → Grid*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.grid[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * link field in *homepage → Grid*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.grid[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * title_link field in *homepage → Grid*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.grid[].title_link
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title_link: prismic.KeyTextField;
+}
+
 type HomepageDocumentDataSlicesSlice = never;
 
 /**
@@ -20,6 +75,17 @@ interface HomepageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
+
+  /**
+   * Grid field in *homepage*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.grid[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  grid: prismic.GroupField<Simplify<HomepageDocumentDataGridItem>>;
 
   /**
    * Slice Zone field in *homepage*
@@ -94,6 +160,7 @@ declare module "@prismicio/client" {
     export type {
       HomepageDocument,
       HomepageDocumentData,
+      HomepageDocumentDataGridItem,
       HomepageDocumentDataSlicesSlice,
       AllDocumentTypes,
     };

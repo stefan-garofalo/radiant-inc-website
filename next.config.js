@@ -9,6 +9,12 @@ const nextConfig = {
         port: "",
         pathname: `/${process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT}/**`,
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: `/**`,
+      }
     ],
   },
 };
