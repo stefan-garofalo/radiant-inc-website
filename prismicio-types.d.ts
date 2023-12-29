@@ -146,7 +146,215 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument;
+/**
+ * Content for Service documents
+ */
+interface ServiceDocumentData {
+  /**
+   * Title field in *Service*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Service*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Service document from Prismic
+ *
+ * - **API ID**: `service`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ServiceDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ServiceDocumentData>,
+    "service",
+    Lang
+  >;
+
+/**
+ * Item in *Work → Timeframe*
+ */
+export interface WorkDocumentDataTimeframeItem {
+  /**
+   * Start field in *Work → Timeframe*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.timeframe[].start
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  start: prismic.DateField;
+
+  /**
+   * End field in *Work → Timeframe*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.timeframe[].end
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  end: prismic.DateField;
+}
+
+/**
+ * Item in *Work → About gallery*
+ */
+export interface WorkDocumentDataAboutGalleryItem {
+  /**
+   * image field in *Work → About gallery*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.about_gallery[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Work → Solution gallery*
+ */
+export interface WorkDocumentDataSolutionGalleryItem {
+  /**
+   * Image field in *Work → Solution gallery*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.solution_gallery[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Content for Work documents
+ */
+interface WorkDocumentData {
+  /**
+   * Service type field in *Work*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.service_type
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  service_type: prismic.ContentRelationshipField<"service">;
+
+  /**
+   * Title field in *Work*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Client field in *Work*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.client
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  client: prismic.KeyTextField;
+
+  /**
+   * Timeframe field in *Work*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.timeframe[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  timeframe: prismic.GroupField<Simplify<WorkDocumentDataTimeframeItem>>;
+
+  /**
+   * About field in *Work*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.about
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  about: prismic.RichTextField;
+
+  /**
+   * About gallery field in *Work*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.about_gallery[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  about_gallery: prismic.GroupField<Simplify<WorkDocumentDataAboutGalleryItem>>;
+
+  /**
+   * Solution field in *Work*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.solution
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  solution: prismic.RichTextField;
+
+  /**
+   * Solution gallery field in *Work*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work.solution_gallery[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  solution_gallery: prismic.GroupField<
+    Simplify<WorkDocumentDataSolutionGalleryItem>
+  >;
+}
+
+/**
+ * Work document from Prismic
+ *
+ * - **API ID**: `work`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type WorkDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<WorkDocumentData>, "work", Lang>;
+
+export type AllDocumentTypes =
+  | HomepageDocument
+  | ServiceDocument
+  | WorkDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -162,6 +370,13 @@ declare module "@prismicio/client" {
       HomepageDocumentData,
       HomepageDocumentDataGridItem,
       HomepageDocumentDataSlicesSlice,
+      ServiceDocument,
+      ServiceDocumentData,
+      WorkDocument,
+      WorkDocumentData,
+      WorkDocumentDataTimeframeItem,
+      WorkDocumentDataAboutGalleryItem,
+      WorkDocumentDataSolutionGalleryItem,
       AllDocumentTypes,
     };
   }
