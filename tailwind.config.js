@@ -22,9 +22,17 @@ module.exports = {
         300: '#F9F7F5',
         400: '#FFFFFF',
       },
-      
+    },
+    extend: {
+      spacing: {
+        container: '2.5rem'
+      },
+      aspectRatio: {
+        work: '1.43'
+      }
     },
   },
+  
   plugins: [
     require('tailwindcss-typography-shorthand'),
   ],
