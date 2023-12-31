@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Picture from '../UI/Picture'
 
-export default function CardWork({ item }) {
+export default function CardWork({ item, isDragging }) {
   return (
     <figure className="flex flex-col gap-2 relative hover:opacity-40 transition-opacity duration-300">
       <div className="aspect-work h-80 rounded-2xl overflow-hidden">
@@ -12,6 +12,8 @@ export default function CardWork({ item }) {
       </div>
       <figcaption className="body-lg text-light-100 dark:text-dark-100 ">
         <Link
+          onClick={(e) => isDragging && e.preventDefault()}
+          onPointerDownCapture={(e) => e.preventDefault()}
           className="after:absolute after:inset-0"
           href={`/work/${item.uid}`}
         >

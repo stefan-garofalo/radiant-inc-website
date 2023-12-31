@@ -63,10 +63,8 @@ export default function Slider({ title, items, className, ...props }) {
           <li
             key={`slide-${index}`}
             className="shrink-0 last:mr-container first:ml-container"
-            onClick={(e) => isDragging && e.preventDefault()}
-            onPointerDownCapture={(e) => e.preventDefault()}
           >
-            <CardWork item={item} />
+            <CardWork item={item} isDragging={isDragging} />
           </li>
         ))}
       </motion.ul>
