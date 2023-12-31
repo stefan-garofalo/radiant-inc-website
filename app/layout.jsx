@@ -1,7 +1,7 @@
 import './globals.css'
 
 import { Almarai } from 'next/font/google'
-const almarai = Almarai({ subsets: ['latin'], weight: '400' })
+const almarai = Almarai({ subsets: ['arabic'], weight: '400' })
 
 export const metadata = {
   title: 'Corporate Agency Website',

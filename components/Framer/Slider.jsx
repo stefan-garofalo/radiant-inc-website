@@ -3,6 +3,8 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 
+import CardWork from '../Card/Work'
+
 export default function Slider({ title, items, className, ...props }) {
   const sliderRef = useRef(null)
   const slidesRef = useRef(null)
@@ -11,7 +13,7 @@ export default function Slider({ title, items, className, ...props }) {
   const [slidesWidth, setSlidesWidths] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
 
-  const slideMarginRight = 15
+  const slideMarginRight = 22.5
   const totalSlidesMarginRight = slideMarginRight * items.length
 
   useEffect(() => {
@@ -60,13 +62,11 @@ export default function Slider({ title, items, className, ...props }) {
         {items.map((item, index) => (
           <li
             key={`slide-${index}`}
-            className="shrink-0 size-48 bg-dark-200 relative"
+            className="shrink-0 last:mr-container first:ml-container"
             onClick={(e) => isDragging && e.preventDefault()}
             onPointerDownCapture={(e) => e.preventDefault()}
           >
-            <a href="/404" className="absolute inset-0">
-              AAAA
-            </a>
+            <CardWork item={item} />
           </li>
         ))}
       </motion.ul>
