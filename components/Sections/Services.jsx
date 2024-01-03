@@ -7,7 +7,7 @@ const backgroundList = [
   'bg-gradient-to-132 dark:bg-gradient-to-r from-[#3B3D35] to-[#DDD9D7] dark:from-[#E2FFE0] dark:to-[#FEFDB8]',
 ]
 
-export default function HomeServices({ content }) {
+export default function SectionServices({ content }) {
   console.log(content)
   return (
     <section className="container py-5 text-light-400 dark:text-dark-400">

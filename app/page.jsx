@@ -1,11 +1,11 @@
 import prismic from '@/lib/prismic'
 
-import HomeHero from '@/components/home/Hero'
-import HomeGrid from '@/components/home/Grid'
-import HomeWorks from '@/components/home/Works'
-import HomeServices from '@/components/home/Services'
+import SectionHero from '@/components/Sections/Hero'
+import SectionGrid from '@/components/Sections/Grid'
+import SectionWorks from '@/components/Sections/Works'
+import SectionServices from '@/components/Sections/Services'
 
-export default async function Home() {
+export default async function Section() {
   const [page, works, services] = await Promise.all([
     prismic.getSingleton('homepage'),
     prismic.getCollection({ type: 'work' }),
@@ -14,10 +14,10 @@ export default async function Home() {
 
   return (
     <>
-      <HomeHero content={page.data.title} />
-      <HomeGrid content={page.data.grid[0]} />
-      <HomeWorks content={works} />
-      <HomeServices content={services} />
+      <SectionHero content={page.data.title} />
+      <SectionGrid content={page.data.grid[0]} />
+      <SectionWorks content={works} />
+      <SectionServices content={services} />
     </>
   )
 }

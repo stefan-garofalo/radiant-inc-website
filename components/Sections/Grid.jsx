@@ -2,7 +2,7 @@ import { PrismicRichText } from '@prismicio/react'
 import Button from '../UI/Button'
 import Picture from '../UI/Picture'
 
-export default function HomeGrid({ content }) {
+export default function SectionGrid({ content }) {
   return (
     <section className="container py-8 grid grid-cols-2 gap-5">
       <div className="col-span-full py-8">tags</div>
