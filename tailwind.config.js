@@ -25,15 +25,19 @@ module.exports = {
     },
     extend: {
       spacing: {
-        container: '2.5rem'
+        container: '2.5rem',
       },
       aspectRatio: {
-        work: '1.43'
-      }
+        work: '1.43',
+      },
+      backgroundImage: {
+        'gradient-to-208':
+          'linear-gradient(190deg, var(--tw-gradient-stops));',
+        'gradient-to-132':
+          'linear-gradient(132deg, var(--tw-gradient-stops));',
+      },
     },
   },
-  
-  plugins: [
-    require('tailwindcss-typography-shorthand'),
-  ],
+
+  plugins: [require('tailwindcss-typography-shorthand')],
 }

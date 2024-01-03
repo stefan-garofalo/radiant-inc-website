@@ -23,4 +23,3 @@ export default function CardWork({ item, isDragging }) {
     </figure>
   )
 }
-//#68F7EF, #F8FED1

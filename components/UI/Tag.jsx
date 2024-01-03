@@ -1,7 +1,13 @@
-export default function Tag({ children, ...props }) {
+const colorMap = {
+  white:
+    'border-dark-400 dark:border-light-400 text-dark-400 dark:text-light-400 body-xl hover:bg-dark-400 dark:hover:bg-light-400 hover:text-light-400 dark:hover:text-dark-400',
+  dark: 'dark:border-dark-400 border-light-400 dark:text-dark-400 text-light-400 body-xl dark:hover:bg-dark-400 hover:bg-light-400 dark:hover:text-light-400 hover:text-dark-400',
+}
+
+export default function Tag({ children, mode = 'dark', ...props }) {
   return (
     <button
-      className="px-3.5 py-1 rounded-[30px] border border-dark-400 dark:border-dark-100 text-dark-400 dark:text-dark-100 body-xl hover:bg-dark-400 dark:hover:bg-dark-100 hover:text-dark-100 dark:hover:text-dark-400 transition-colors duration-300"
+      className={`px-3.5 py-1 rounded-[30px] border transition-colors duration-300 ${colorMap[mode]}`}
       {...props}
     >
       {children}

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import IconArrowRight from '../icons/ArrowRight'
 
 const colorMap = {
@@ -10,14 +11,16 @@ export default function Button({
   tag = 'button',
   mode = 'dark',
   children,
+  className,
   ...props
 }) {
-  const Component = tag
+  const Component = tag === 'Link' ? Link : tag
   return (
     <Component
       className={`
         ${colorMap[mode]} 
-        inline-flex w-fit items-center gap-2 p-4 rounded-[4px] border transition-colors duration-300
+        ${className}
+        inline-flex w-fit items-center gap-2 p-4 rounded-[14px] border transition-colors duration-300
       `}
       {...props}
     >
