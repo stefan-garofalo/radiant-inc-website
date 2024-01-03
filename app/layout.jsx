@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${almarai.className} bg-light-400 dark:bg-dark-400`}>
+      <body className={`${almarai.className} bg-light-400 text-light-100 dark:text-dark-100 dark:bg-dark-400`}>
         <main>{children}</main>
       </body>
     </html>
