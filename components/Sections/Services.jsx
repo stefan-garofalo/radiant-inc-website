@@ -8,7 +8,6 @@ const backgroundList = [
 ]
 
 export default function SectionServices({ content }) {
-  console.log(content)
   return (
     <section className="container py-5 text-light-400 dark:text-dark-400">
       <ul className="flex flex-col gap-y-5">

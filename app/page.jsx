@@ -6,16 +6,17 @@ import SectionWorks from '@/components/Sections/Works'
 import SectionServices from '@/components/Sections/Services'
 
 export default async function Section() {
-  const [page, works, services] = await Promise.all([
+  const [page, works, services, tags] = await Promise.all([
     prismic.getSingleton('homepage'),
     prismic.getCollection({ type: 'work' }),
     prismic.getCollection({ type: 'service' }),
+    prismic.getAllTags(),
   ])
 
   return (
     <>
       <SectionHero content={page.data.title} />
-      <SectionGrid content={page.data.grid[0]} />
+      <SectionGrid content={page.data.grid[0]} tags={tags} />
       <SectionWorks content={works} />
       <SectionServices content={services} />
     </>
