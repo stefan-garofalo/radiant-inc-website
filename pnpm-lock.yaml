@@ -15,8 +15,11 @@ dependencies:
     specifier: ^2.7.3
     version: 2.7.3(@prismicio/client@7.3.1)(react@18.2.0)
   framer-motion:
-    specifier: ^10.16.16
-    version: 10.16.16(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^10.17.4
+    version: 10.17.4(react-dom@18.2.0)(react@18.2.0)
+  jotai:
+    specifier: ^2.6.1
+    version: 2.6.1(react@18.2.0)
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -453,7 +456,7 @@ packages:
     dev: true
     optional: true
 
-  /@prismicio/api-renderer@1.0.0(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21):
+  /@prismicio/api-renderer@1.0.0(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21):
     resolution: {integrity: sha512-dD74209FaT4JB+pZkLP+69u5rFqzcuNQU9aBMN9sQ4usSbScuSbNdXL1hVasAite5r+hIiphskfxaxdfqPvDIw==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -461,10 +464,10 @@ packages:
       io-ts: ^2.2.16
       io-ts-types: ^0.5.16
     dependencies:
-      '@prismicio/types-internal': 1.5.3(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      '@prismicio/types-internal': 1.5.3(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
       tslib: 2.6.2
       uuid: 8.3.2
     dev: true
@@ -486,14 +489,14 @@ packages:
     resolution: {integrity: sha512-zWbAox9YEvYQNVrnOJIE0AIW/UKswtYDS+IH+Ikr36Hfn+cStKFI33n44B7xaAhX17pjSrNDzWQrSO16Vq98lg==}
     engines: {node: '>=12.7.0'}
     dependencies:
-      '@prismicio/api-renderer': 1.0.0(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)
-      '@prismicio/types-internal': 2.0.0-alpha.8(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      '@prismicio/api-renderer': 1.0.0(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)
+      '@prismicio/types-internal': 2.0.0-alpha.8(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
       lorem-ipsum: 2.0.8
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       tslib: 2.6.2
       uuid: 8.3.2
     dev: true
@@ -502,14 +505,14 @@ packages:
     resolution: {integrity: sha512-yp7WTNoGFjBBBJE08tu4RSGD1OHIkbdH65lLoXJtyiKClXnB8vxi4wzCb6QvnVAxAjOkJR1GRN8WukkYlJDbjw==}
     engines: {node: '>=12.7.0'}
     dependencies:
-      '@prismicio/api-renderer': 1.0.0(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)
-      '@prismicio/types-internal': 2.0.0-alpha.8(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      '@prismicio/api-renderer': 1.0.0(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)
+      '@prismicio/types-internal': 2.0.0-alpha.8(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
       lorem-ipsum: 2.0.8
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       tslib: 2.6.2
       uuid: 8.3.2
     dev: true
@@ -558,7 +561,7 @@ packages:
       statuses: 2.0.1
     dev: true
 
-  /@prismicio/types-internal@1.5.3(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21):
+  /@prismicio/types-internal@1.5.3(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21):
     resolution: {integrity: sha512-GHV2rZsCUJJQDF7gF2to0F/3eolTXD/ng7ClfbqtHO3udJ5D+iifocAEnsEdi+Y9VKT/WVgyBi/dA6GAhNMHmQ==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -566,15 +569,15 @@ packages:
       io-ts: ^2.2.16
       io-ts-types: ^0.5.16
     dependencies:
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       tslib: 2.6.2
     dev: true
 
-  /@prismicio/types-internal@2.0.0-alpha.8(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21):
+  /@prismicio/types-internal@2.0.0-alpha.8(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21):
     resolution: {integrity: sha512-mTyzwnDrOJMl7m5FkpoCIfF7x1kOnQ4vUspcYa5Qj18r8QY2djhRzBcMtIttMlUM5ZbLJBXtyVXeHftHuODb1Q==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -582,15 +585,15 @@ packages:
       io-ts: ^2.2.16
       io-ts-types: ^0.5.16
     dependencies:
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       tslib: 2.6.2
     dev: true
 
-  /@prismicio/types-internal@2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1):
+  /@prismicio/types-internal@2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1):
     resolution: {integrity: sha512-BeUiA1KiwCVYi2QLii5gg8u22x4ey8pHPhO5BHf7NQUCOm/mjtizbjUyqDk92NwhGKC9MRCOFqgAOb6kvUctng==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -601,11 +604,11 @@ packages:
       uuid: ^9.0.0
     dependencies:
       '@types/uuid': 9.0.7
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       tslib: 2.6.2
       uuid: 9.0.1
     dev: true
@@ -667,14 +670,14 @@ packages:
       react: ^17 || ^18
     dependencies:
       '@prismicio/simulator': 0.1.4
-      '@prismicio/types-internal': 2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1)
+      '@prismicio/types-internal': 2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1)
       '@slicemachine/plugin-kit': 0.4.31(@prismicio/client@7.3.1)
       common-tags: 1.8.2
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       node-fetch: 3.3.2
       pascal-case: 3.1.2
@@ -699,7 +702,7 @@ packages:
       '@antfu/ni': 0.20.0
       '@prismicio/custom-types-client': 1.2.0
       '@prismicio/mocks': 2.0.0
-      '@prismicio/types-internal': 2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1)
+      '@prismicio/types-internal': 2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1)
       '@segment/analytics-node': 1.1.3
       '@slicemachine/plugin-kit': 0.4.31(@prismicio/client@7.3.1)
       '@wooorm/starry-night': 1.7.0
@@ -707,15 +710,15 @@ packages:
       cors: 2.8.5
       execa: 7.2.0
       file-type: 18.7.0
-      fp-ts: 2.16.1
+      fp-ts: 2.16.2
       get-port: 6.1.2
       h3: 1.9.0
       hast-util-to-string: 2.0.0
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-reporters: 2.0.1(fp-ts@2.16.1)(io-ts@2.2.21)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-reporters: 2.0.1(fp-ts@2.16.2)(io-ts@2.2.21)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       node-fetch: 3.3.2
       p-limit: 4.0.0
       prettier: 3.1.1
@@ -743,10 +746,10 @@ packages:
       common-tags: 1.8.2
       defu: 6.1.3
       dotenv: 16.3.1
-      fp-ts: 2.16.1
+      fp-ts: 2.16.2
       fs-extra: 11.1.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-reporters: 2.0.1(fp-ts@2.16.1)(io-ts@2.2.21)
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-reporters: 2.0.1(fp-ts@2.16.2)(io-ts@2.2.21)
       p-limit: 4.0.0
       prettier: 3.1.1
       prismic-ts-codegen: 0.1.19(@prismicio/client@7.3.1)
@@ -770,8 +773,8 @@ packages:
       '@types/ms': 0.7.34
     dev: true
 
-  /@types/hast@2.3.8:
-    resolution: {integrity: sha512-aMIqAlFd2wTIDZuvLbhUT+TGvMxrNC8ECUIVtH6xxy0sQLs3iu6NO8Kp/VT5je7i5ufnebXzdV1dNDMnvaH6IQ==}
+  /@types/hast@2.3.9:
+    resolution: {integrity: sha512-pTHyNlaMD/oKJmS+ZZUyFUcsZeBZpC0lmGquw98CqRVNgAdJZJeD7GoeLiT6Xbx5rU9VCjSt0RwEvDgzh4obFw==}
     dependencies:
       '@types/unist': 2.0.10
     dev: true
@@ -779,7 +782,7 @@ packages:
   /@types/http-proxy@1.17.14:
     resolution: {integrity: sha512-SSrD0c1OQzlFX7pGu1eXxSEjemej64aaNPRhhVYUGqXh0BtldAAx37MG8btcumvpgKyZp1F5Gn3JkktdxiFv6w==}
     dependencies:
-      '@types/node': 20.10.5
+      '@types/node': 20.10.6
     dev: true
 
   /@types/mdast@3.0.15:
@@ -792,8 +795,8 @@ packages:
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
     dev: true
 
-  /@types/node@20.10.5:
-    resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==}
+  /@types/node@20.10.6:
+    resolution: {integrity: sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -817,7 +820,7 @@ packages:
   /@wooorm/starry-night@1.7.0:
     resolution: {integrity: sha512-ktO0nkddrovIoNW2jAUT+Cdd9n1bWjy1Ir4CdcmgTaT6E94HLlQfu7Yv62falclBEwvsuVp3bSBw23wtta1fNw==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       import-meta-resolve: 2.2.2
       vscode-oniguruma: 1.7.0
       vscode-textmate: 9.0.0
@@ -881,7 +884,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.22.2
-      caniuse-lite: 1.0.30001571
+      caniuse-lite: 1.0.30001572
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -964,8 +967,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001571
-      electron-to-chromium: 1.4.616
+      caniuse-lite: 1.0.30001572
+      electron-to-chromium: 1.4.618
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
     dev: true
@@ -1001,8 +1004,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /caniuse-lite@1.0.30001571:
-    resolution: {integrity: sha512-tYq/6MoXhdezDLFZuCO/TKboTzuQ/xR5cFdgXPfDtM7/kchBO3b4VWghE/OAi/DV7tTdhmLjZiZBZi1fA/GheQ==}
+  /caniuse-lite@1.0.30001572:
+    resolution: {integrity: sha512-1Pbh5FLmn5y4+QhNyJE9j3/7dK44dGB83/ZMjv/qJk86TvDbjk0LosiZo0i0WB0Vx607qMX9jYrn1VLHCkN4rw==}
 
   /ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1251,8 +1254,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: true
 
-  /electron-to-chromium@1.4.616:
-    resolution: {integrity: sha512-1n7zWYh8eS0L9Uy+GskE0lkBUNK83cXTVJI0pU3mGprFsbfSdAc15VTFbo+A+Bq4pwstmL30AVcEU3Fo463lNg==}
+  /electron-to-chromium@1.4.618:
+    resolution: {integrity: sha512-mTM2HieHLxs1RbD/R/ZoQLMsGI8lWIkP17G7cx32mJRBJt9wlNPkXwE3sYg/OnNb5GBkus98lXatSthoL8Y5Ag==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -1410,8 +1413,8 @@ packages:
     hasBin: true
     dev: true
 
-  /follow-redirects@1.15.3:
-    resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==}
+  /follow-redirects@1.15.4:
+    resolution: {integrity: sha512-Cr4D/5wlrb0z9dgERpUL3LrmPKVDsETIJhaCMeDfuFYcqa5bldGV6wBsAN6X/vxlXQtFBMrXdXxdL8CbDTGniw==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -1440,16 +1443,16 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /fp-ts@2.16.1:
-    resolution: {integrity: sha512-by7U5W8dkIzcvDofUcO42yl9JbnHTEDBrzu3pt5fKT+Z4Oy85I21K80EYJYdjQGC2qum4Vo55Ag57iiIK4FYuA==}
+  /fp-ts@2.16.2:
+    resolution: {integrity: sha512-CkqAjnIKFqvo3sCyoBTqgJvF+bHrSik584S9nhTjtBESLx26cbtVMR/T9a6ApChOcSDAaM3JydDmWDUn4EEXng==}
     dev: true
 
   /fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
 
-  /framer-motion@10.16.16(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-je6j91rd7NmUX7L1XHouwJ4v3R+SO4umso2LUcgOct3rHZ0PajZ80ETYZTajzEXEl9DlKyzjyt4AvGQ+lrebOw==}
+  /framer-motion@10.17.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CYBSs6cWfzcasAX8aofgKFZootmkQtR4qxbfTOksBLny/lbUfkGbQAFOS3qnl6Uau1N9y8tUpI7mVIrHgkFjLQ==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -1593,7 +1596,7 @@ packages:
   /hast-util-from-parse5@7.1.2:
     resolution: {integrity: sha512-Nz7FfPBuljzsN3tCQ4kCBKqdNhQE2l0Tn+X1ubgKBPRoiDIu1mL08Cfw4k7q71+Duyaw7DXDN+VTAp4Vh3oCOw==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       '@types/unist': 2.0.10
       hastscript: 7.2.0
       property-information: 6.4.0
@@ -1605,13 +1608,13 @@ packages:
   /hast-util-parse-selector@3.1.1:
     resolution: {integrity: sha512-jdlwBjEexy1oGz0aJ2f4GKMaVKkA9jwjr4MjAAI22E5fM/TXVZHuS5OpONtdeIkRKqAaryQ2E9xNQxijoThSZA==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
     dev: true
 
   /hast-util-raw@7.2.3:
     resolution: {integrity: sha512-RujVQfVsOrxzPOPSzZFiwofMArbQke6DJjnFfceiEbFh7S05CbPt0cYN+A5YeD3pso0JQk6O1aHBnx9+Pm2uqg==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       '@types/parse5': 6.0.3
       hast-util-from-parse5: 7.1.2
       hast-util-to-parse5: 7.1.0
@@ -1627,7 +1630,7 @@ packages:
   /hast-util-to-html@8.0.4:
     resolution: {integrity: sha512-4tpQTUOr9BMjtYyNlt0P50mH7xj0Ks2xpo8M943Vykljf99HW6EzulIoJP1N3eKOSScEHzyzi9dm7/cn0RfGwA==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       '@types/unist': 2.0.10
       ccount: 2.0.1
       comma-separated-tokens: 2.0.3
@@ -1643,7 +1646,7 @@ packages:
   /hast-util-to-parse5@7.1.0:
     resolution: {integrity: sha512-YNRgAJkH2Jky5ySkIqFXTQiaqcAtJyVE+D5lkN6CdtOqrnkLfGYYrEcKuHOJZlp+MwjSwuD3fZuawI+sic/RBw==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       comma-separated-tokens: 2.0.3
       property-information: 6.4.0
       space-separated-tokens: 2.0.2
@@ -1654,7 +1657,7 @@ packages:
   /hast-util-to-string@2.0.0:
     resolution: {integrity: sha512-02AQ3vLhuH3FisaMM+i/9sm4OXGSq1UhOOCpTLLQtHdL3tZt7qil69r8M8iDkZYyC0HCFylcYoP+8IO7ddta1A==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
     dev: true
 
   /hast-util-whitespace@2.0.1:
@@ -1664,7 +1667,7 @@ packages:
   /hastscript@7.2.0:
     resolution: {integrity: sha512-TtYPq24IldU8iKoJQqvZOuhi5CyCQRAbvDOX0x1eW6rsHSxa/1i2CCiptNTotGHJ3VoHRGmqiv6/D3q113ikkw==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       comma-separated-tokens: 2.0.3
       hast-util-parse-selector: 3.1.1
       property-information: 6.4.0
@@ -1709,7 +1712,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.3
+      follow-redirects: 1.15.4
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -1743,18 +1746,18 @@ packages:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
     dev: true
 
-  /io-ts-reporters@2.0.1(fp-ts@2.16.1)(io-ts@2.2.21):
+  /io-ts-reporters@2.0.1(fp-ts@2.16.2)(io-ts@2.2.21):
     resolution: {integrity: sha512-RVpLstYBsmTGgCW9wJ5KVyN/eRnRUDp87Flt4D1O3aJ7oAnd8csq8aXuu7ZeNK8qEDKmjUl9oUuzfwikaNAMKQ==}
     peerDependencies:
       fp-ts: ^2.10.5
       io-ts: ^2.2.16
     dependencies:
       '@scarf/scarf': 1.3.0
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
     dev: true
 
-  /io-ts-types@0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5):
+  /io-ts-types@0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5):
     resolution: {integrity: sha512-kQOYYDZG5vKre+INIDZbLeDJe+oM+4zLpUkjXyTMyUfoCpjJNyi29ZLkuEAwcPufaYo3yu/BsemZtbdD+NtRfQ==}
     peerDependencies:
       fp-ts: ^2.0.0
@@ -1762,18 +1765,18 @@ packages:
       monocle-ts: ^2.0.0
       newtype-ts: ^0.3.2
     dependencies:
-      fp-ts: 2.16.1
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      fp-ts: 2.16.2
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
     dev: true
 
-  /io-ts@2.2.21(fp-ts@2.16.1):
+  /io-ts@2.2.21(fp-ts@2.16.2):
     resolution: {integrity: sha512-zz2Z69v9ZIC3mMLYWIeoUcwWD6f+O7yP92FMVVaXEOSZH1jnVBmET/urd/uoarD1WGBY4rCj8TAyMPzsGNzMFQ==}
     peerDependencies:
       fp-ts: ^2.5.0
     dependencies:
-      fp-ts: 2.16.1
+      fp-ts: 2.16.2
     dev: true
 
   /ipaddr.js@1.9.1:
@@ -1884,6 +1887,21 @@ packages:
       '@sideway/formula': 3.0.1
       '@sideway/pinpoint': 2.0.0
     dev: true
+
+  /jotai@2.6.1(react@18.2.0):
+    resolution: {integrity: sha512-GLQtAnA9iEKRMXnyCjf1azIxfQi5JausX2EI5qSlb59j4i73ZEyV/EXPDEAQj4uQNZYEefi3degv/Pw3+L/Dtg==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=17.0.0'
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -2057,7 +2075,7 @@ packages:
   /mdast-util-to-hast@12.3.0:
     resolution: {integrity: sha512-pits93r8PhnIoU4Vy9bjW39M2jJ6/tdHyja9rrot9uujkN7UTU9SDnE6WNJz/IGyQk3XHX6yNNtrBH6cQzm8Hw==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       '@types/mdast': 3.0.15
       mdast-util-definitions: 5.1.2
       micromark-util-sanitize-uri: 1.2.0
@@ -2410,12 +2428,12 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dev: true
 
-  /monocle-ts@2.3.13(fp-ts@2.16.1):
+  /monocle-ts@2.3.13(fp-ts@2.16.2):
     resolution: {integrity: sha512-D5Ygd3oulEoAm3KuGO0eeJIrhFf1jlQIoEVV2DYsZUMz42j4tGxgct97Aq68+F8w4w4geEnwFa8HayTS/7lpKQ==}
     peerDependencies:
       fp-ts: ^2.5.0
     dependencies:
-      fp-ts: 2.16.1
+      fp-ts: 2.16.2
     dev: true
 
   /mri@1.2.0:
@@ -2452,14 +2470,14 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
 
-  /newtype-ts@0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13):
+  /newtype-ts@0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13):
     resolution: {integrity: sha512-v83UEQMlVR75yf1OUdoSFssjitxzjZlqBAjiGQ4WJaML8Jdc68LJ+BaSAXUmKY4bNzp7hygkKLYTsDi14PxI2g==}
     peerDependencies:
       fp-ts: ^2.0.0
       monocle-ts: ^2.0.0
     dependencies:
-      fp-ts: 2.16.1
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
+      fp-ts: 2.16.2
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
     dev: true
 
   /next@14.0.4(react-dom@18.2.0)(react@18.2.0):
@@ -2480,7 +2498,7 @@ packages:
       '@next/env': 14.0.4
       '@swc/helpers': 0.5.2
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001571
+      caniuse-lite: 1.0.30001572
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.2.0
@@ -2513,8 +2531,8 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: true
 
-  /node-fetch-native@1.5.1:
-    resolution: {integrity: sha512-KNVu95aIrNzw7v1aKyVv/nC2kHUqNzgBnFuMTemhHnk7djEMtLjaJSDCB8h2VVgKL5s+NAcvBlZ2OIHLP0RC/Q==}
+  /node-fetch-native@1.6.1:
+    resolution: {integrity: sha512-bW9T/uJDPAJB2YNYEpWzE54U5O3MQidXsOyTfnbKYtTtFexRvGzb1waphBN4ZwP6EcIvYYEOwW0b72BpAqydTw==}
     dev: true
 
   /node-fetch@2.7.0:
@@ -2718,11 +2736,11 @@ packages:
       postcss: ^8.2.14
     dependencies:
       postcss: 8.4.32
-      postcss-selector-parser: 6.0.13
+      postcss-selector-parser: 6.0.15
     dev: true
 
-  /postcss-selector-parser@6.0.13:
-    resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
+  /postcss-selector-parser@6.0.15:
+    resolution: {integrity: sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
@@ -2899,7 +2917,7 @@ packages:
   /rehype-stringify@9.0.4:
     resolution: {integrity: sha512-Uk5xu1YKdqobe5XpSskwPvo1XeHUUucWEQSl8hTrXt5selvca1e8K1EZ37E6YoZ4BT8BCqCdVfQW7OfHfthtVQ==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       hast-util-to-html: 8.0.4
       unified: 10.1.2
     dev: true
@@ -2928,7 +2946,7 @@ packages:
   /remark-rehype@10.1.0:
     resolution: {integrity: sha512-EFmR5zppdBp0WQeDVZ/b66CWJipB2q2VLNFMabzDSGR66Z2fQii83G5gTBbgGEnEEA0QRussvrFHxk1HWGJskw==}
     dependencies:
-      '@types/hast': 2.3.8
+      '@types/hast': 2.3.9
       '@types/mdast': 3.0.15
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
@@ -3131,19 +3149,19 @@ packages:
     hasBin: true
     dependencies:
       '@prismicio/mocks': 2.1.1
-      '@prismicio/types-internal': 2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.1)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1)
+      '@prismicio/types-internal': 2.3.1(@types/uuid@9.0.7)(fp-ts@2.16.2)(io-ts-types@0.5.19)(io-ts@2.2.21)(uuid@9.0.1)
       '@slicemachine/manager': 0.17.5(@prismicio/client@7.3.1)(@types/uuid@9.0.7)(uuid@9.0.1)
       body-parser: 1.20.2
       chalk: 4.1.2
       cors: 2.8.5
       express: 4.18.2
-      fp-ts: 2.16.1
+      fp-ts: 2.16.2
       http-proxy-middleware: 2.0.6
-      io-ts: 2.2.21(fp-ts@2.16.1)
-      io-ts-types: 0.5.19(fp-ts@2.16.1)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
-      monocle-ts: 2.3.13(fp-ts@2.16.1)
+      io-ts: 2.2.21(fp-ts@2.16.2)
+      io-ts-types: 0.5.19(fp-ts@2.16.2)(io-ts@2.2.21)(monocle-ts@2.3.13)(newtype-ts@0.3.5)
+      monocle-ts: 2.3.13(fp-ts@2.16.2)
       mri: 1.2.0
-      newtype-ts: 0.3.5(fp-ts@2.16.1)(monocle-ts@2.3.13)
+      newtype-ts: 0.3.5(fp-ts@2.16.2)(monocle-ts@2.3.13)
       node-fetch: 3.3.2
       open: 8.4.2
       serve-static: 1.15.0
@@ -3296,7 +3314,7 @@ packages:
       postcss-js: 4.0.1(postcss@8.4.32)
       postcss-load-config: 4.0.2(postcss@8.4.32)
       postcss-nested: 6.0.1(postcss@8.4.32)
-      postcss-selector-parser: 6.0.13
+      postcss-selector-parser: 6.0.15
       resolve: 1.22.8
       sucrase: 3.35.0
     transitivePeerDependencies:
@@ -3381,7 +3399,7 @@ packages:
       consola: 3.2.3
       defu: 6.1.3
       mime: 3.0.0
-      node-fetch-native: 1.5.1
+      node-fetch-native: 1.6.1
       pathe: 1.1.1
     dev: true
 

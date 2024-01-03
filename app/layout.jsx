@@ -1,6 +1,7 @@
 import './globals.css'
-import prismic from '@/lib/prismic'
 import { Almarai } from 'next/font/google'
+import JotaiProvider from '@/components/Providers/Jotai'
+
 const almarai = Almarai({ subsets: ['arabic'], weight: '400' })
 
 export const metadata = {
@@ -11,8 +12,12 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${almarai.className} bg-light-400 text-light-100 dark:text-dark-100 dark:bg-dark-400`}>
-        <main>{children}</main>
+      <body
+        className={`${almarai.className} bg-light-400 text-light-100 dark:text-dark-100 dark:bg-dark-400`}
+      >
+        <JotaiProvider>
+          <main>{children}</main>
+        </JotaiProvider>
       </body>
     </html>
   )

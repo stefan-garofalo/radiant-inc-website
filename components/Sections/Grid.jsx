@@ -7,8 +7,8 @@ import IconArrowRight from '../icons/ArrowRight'
 export default function SectionGrid({ content, tags }) {
   return (
     <section className="container py-8 grid grid-cols-2 gap-5">
-      <div className="col-span-full flex items-center justify-between py-8">
-        <ul className="flex items-center gap-3">
+      <div className="col-span-full flex items-start justify-between py-8">
+        <ul className="flex items-center flex-wrap gap-3">
           {tags.map((tag, i) => (
             <li key={`tag-${i}`}>
               <Tag
