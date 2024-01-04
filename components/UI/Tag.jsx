@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { tagAtom } from '@/store/atoms'
 import { useAtom } from 'jotai'
 
@@ -11,16 +10,13 @@ const colorMap = {
 }
 
 export default function Tag({ children, mode = 'dark', className, ...props }) {
-  const [active, setActive] = useState(false)
   const [tags, setTags] = useAtom(tagAtom)
 
   function pushTag() {
-    if (active) {
+    if (tags.includes(children)) {
       setTags(tags.filter((tag) => tag !== children))
-      setActive(false)
     } else {
       setTags([...tags, children])
-      setActive(true)
     }
   }
 
@@ -30,7 +26,11 @@ export default function Tag({ children, mode = 'dark', className, ...props }) {
         px-3.5 py-1 rounded-[30px] text-xl whitespace-nowrap border transition-all duration-300 
         ${colorMap[mode]} 
         ${className}
-        ${tags.length > 0 && !active && 'opacity-50'}
+        ${
+          tags.length > 0 && !tags.includes(children)
+            ? 'opacity-20'
+            : 'opacity-100'
+        }
       `}
       onClick={pushTag}
       {...props}
