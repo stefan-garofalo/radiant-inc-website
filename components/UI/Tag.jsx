@@ -4,7 +4,7 @@ import { tagAtom } from '@/store/atoms'
 import { useAtom } from 'jotai'
 
 const colorMap = {
-  white:
+  light:
     'border-dark-400 dark:border-light-400 text-dark-400 dark:text-light-400 body-xl hover:bg-dark-400 dark:hover:bg-light-400 hover:text-light-400 dark:hover:text-dark-400',
   dark: 'dark:border-dark-400 border-light-400 dark:text-dark-400 text-light-400 body-xl dark:hover:bg-dark-400 hover:bg-light-400 dark:hover:text-light-400 hover:text-dark-400',
 }

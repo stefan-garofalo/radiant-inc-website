@@ -20,8 +20,11 @@ export default function SectionGrid({ content, tags }) {
             </li>
           ))}
         </ul>
-        <a href="#works">
-          <IconArrowRight className="size-8 rotate-90 border rounded-full p-1 hover:bg-light-100 hover:border-light-100 hover:text-dark-100 transition-colors duration-300" />
+        <a
+          href="#works"
+          className="border rounded-full p-1 border-dark-400 dark:border-light-400 text-dark-400 dark:text-light-400 body-xl hover:bg-dark-400 dark:hover:bg-light-400 hover:text-light-400 dark:hover:text-dark-400 transition-colors duration-300"
+        >
+          <IconArrowRight className="size-5 rotate-90 " />
         </a>
       </div>
       <div className="bg-gradient-to-br dark:bg-gradient-to-r from-[#3E3C41] to-[#FEF6D9] dark:from-[#95ECFD] dark:to-[#E5FFFB] rounded-3xl container py-10 flex flex-col justify-between text-light-400 dark:text-dark-400">

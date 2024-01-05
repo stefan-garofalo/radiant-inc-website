@@ -36,7 +36,7 @@ export default function ActiveTags() {
             </AnimatePresence>
             <button
               onClick={() => setTags([])}
-              className="border rounded-3xl py-1.5 px-4 hover:bg-light-100 hover:border-light-100 hover:text-dark-100 transition-colors duration-300"
+              className="border rounded-3xl py-1.5 px-4 border-dark-400 dark:border-light-400 text-dark-400 dark:text-light-400 hover:bg-dark-400 dark:hover:bg-light-400 hover:text-light-400 dark:hover:text-dark-400 transition-colors duration-300"
             >
               Reset
             </button>
