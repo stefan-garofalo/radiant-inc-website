@@ -11,6 +11,7 @@ export default function Slider({ title, items, className, ...props }) {
 
   const [sliderWidth, setSliderWidths] = useState(0)
   const [slidesWidth, setSlidesWidths] = useState(0)
+  const [isOverflowing, setIsOverflowing] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
 
   const slideMarginRight = 22.5
@@ -29,6 +30,7 @@ export default function Slider({ title, items, className, ...props }) {
         0
       )
       setSlidesWidths(slidesSumWidth)
+      setIsOverflowing(slidesSumWidth > sliderWidth)
     }
 
     measureSliderWidth()
@@ -44,13 +46,23 @@ export default function Slider({ title, items, className, ...props }) {
   }, [sliderWidth, slidesWidth])
 
   return (
-    <div ref={sliderRef} className={`${className} overflow-hidden`} {...props}>
+    <motion.div
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      ref={sliderRef}
+      className={`${className} overflow-hidden`}
+      {...props}
+    >
       <motion.ul
         ref={slidesRef}
         className="flex items-center gap-4"
         drag="x"
         dragConstraints={{
-          left: -(slidesWidth - sliderWidth + totalSlidesMarginRight),
+          left: isOverflowing
+            ? -(slidesWidth - sliderWidth + totalSlidesMarginRight)
+            : 0,
           right: 0,
         }}
         dragElastic={0.15}
@@ -68,6 +80,6 @@ export default function Slider({ title, items, className, ...props }) {
           </li>
         ))}
       </motion.ul>
-    </div>
+    </motion.div>
   )
 }
