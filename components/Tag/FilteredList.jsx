@@ -14,10 +14,17 @@ export default function FilteredList({ items }) {
 
   return (
     <AnimatePresence mode="wait">
-      <Slider
-        key={`filtered-${tags.length}`}
-        items={tags.length > 0 ? filtered : items}
-      />
+      {tags.length > 0 ? (
+        filtered.length > 0 ? (
+          <Slider key={`filtered-${tags.length}`} items={filtered} />
+        ) : (
+          <div className="container h-[353px] body-xl">
+            No works are matching the tags...
+          </div>
+        )
+      ) : (
+        <Slider key={`filtered-${tags.length}`} items={items} />
+      )}
     </AnimatePresence>
   )
 }

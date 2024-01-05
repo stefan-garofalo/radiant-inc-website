@@ -10,7 +10,7 @@ export default function CardWork({ item, isDragging }) {
           image={item.data.solution_gallery[0].image}
         />
       </div>
-      <figcaption className="body-lg  ">
+      <figcaption className="body-lg">
         <Link
           onClick={(e) => isDragging && e.preventDefault()}
           onPointerDownCapture={(e) => e.preventDefault()}

@@ -47,7 +47,6 @@ export default function Slider({ title, items, className, ...props }) {
 
   return (
     <motion.div
-      layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
