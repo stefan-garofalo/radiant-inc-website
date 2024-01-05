@@ -1,8 +1,7 @@
 import './globals.css'
 import { Almarai } from 'next/font/google'
-import JotaiProvider from '@/components/Providers/Jotai'
 
-const almarai = Almarai({ subsets: ['arabic'], weight: '400' })
+const almarai = Almarai({ subsets: ['arabic'], weight: ['400', '700'] })
 
 export const metadata = {
   title: 'Corporate Agency Website',
@@ -15,9 +14,7 @@ export default async function RootLayout({ children }) {
       <body
         className={`${almarai.className} bg-light-400 text-light-100 dark:text-dark-100 dark:bg-dark-400`}
       >
-        <JotaiProvider>
-          <main>{children}</main>
-        </JotaiProvider>
+        {children}
       </body>
     </html>
   )
