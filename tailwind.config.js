@@ -26,9 +26,11 @@ module.exports = {
     extend: {
       spacing: {
         container: '2.5rem',
+        '66.5': '16.625rem',
       },
       aspectRatio: {
         work: '1.43',
+        blog: '1.77'
       },
       backgroundImage: {
         'gradient-to-208':

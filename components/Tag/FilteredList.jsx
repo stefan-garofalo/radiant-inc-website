@@ -5,6 +5,7 @@ import { tagAtom } from '@/store/atoms'
 import { AnimatePresence } from 'framer-motion'
 
 import Slider from '../Framer/Slider'
+import CardWork from '../Card/Work'
 
 export default function FilteredList({ items }) {
   const tags = useAtomValue(tagAtom)
@@ -16,14 +17,14 @@ export default function FilteredList({ items }) {
     <AnimatePresence mode="wait">
       {tags.length > 0 ? (
         filtered.length > 0 ? (
-          <Slider key={`filtered-${tags.length}`} items={filtered} />
+          <Slider key={`filtered-${tags.length}`} items={filtered} card={CardWork} />
         ) : (
           <div className="container h-[353px] body-xl">
             No works are matching the tags...
           </div>
         )
       ) : (
-        <Slider key={`filtered-${tags.length}`} items={items} />
+        <Slider key={`filtered-${tags.length}`} items={items} card={CardWork} />
       )}
     </AnimatePresence>
   )

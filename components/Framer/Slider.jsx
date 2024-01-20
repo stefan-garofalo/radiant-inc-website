@@ -3,9 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 
-import CardWork from '../Card/Work'
-
-export default function Slider({ title, items, className, ...props }) {
+export default function Slider({ title, items, card, className, ...props }) {
   const sliderRef = useRef(null)
   const slidesRef = useRef(null)
 
@@ -16,6 +14,7 @@ export default function Slider({ title, items, className, ...props }) {
 
   const slideMarginRight = 22.5
   const totalSlidesMarginRight = slideMarginRight * items.length
+  const CardComponent = card
 
   useEffect(() => {
     const measureSliderWidth = () => {
@@ -75,7 +74,7 @@ export default function Slider({ title, items, className, ...props }) {
             key={`slide-${index}`}
             className="shrink-0 last:mr-container first:ml-container"
           >
-            <CardWork item={item} isDragging={isDragging} />
+            <CardComponent item={item} isDragging={isDragging} />
           </li>
         ))}
       </motion.ul>
