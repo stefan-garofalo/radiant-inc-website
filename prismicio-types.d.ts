@@ -147,6 +147,45 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 /**
+ * Content for Post documents
+ */
+interface PostDocumentData {
+  /**
+   * Cover field in *Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.cover
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  cover: prismic.ImageField<never>;
+
+  /**
+   * Content field in *Post*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Post document from Prismic
+ *
+ * - **API ID**: `post`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PostDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
+
+/**
  * Content for Service documents
  */
 interface ServiceDocumentData {
@@ -353,6 +392,7 @@ export type WorkDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | HomepageDocument
+  | PostDocument
   | ServiceDocument
   | WorkDocument;
 
@@ -370,6 +410,8 @@ declare module "@prismicio/client" {
       HomepageDocumentData,
       HomepageDocumentDataGridItem,
       HomepageDocumentDataSlicesSlice,
+      PostDocument,
+      PostDocumentData,
       ServiceDocument,
       ServiceDocumentData,
       WorkDocument,
