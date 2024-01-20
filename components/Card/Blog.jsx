@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Picture from '../UI/Picture'
-import Date from '../UI/Date'
+import DateDisplay from '../UI/DateDisplay'
 
 export default function CardBlog({ item, isDragging }) {
   return (
@@ -14,7 +14,7 @@ export default function CardBlog({ item, isDragging }) {
         />
       </div>
       <figcaption className="pt-2">
-        <Date date={item.last_publication_date}/>
+        <DateDisplay value={item.last_publication_date} />
         <Link
           onClick={(e) => isDragging && e.preventDefault()}
           onPointerDownCapture={(e) => e.preventDefault()}
