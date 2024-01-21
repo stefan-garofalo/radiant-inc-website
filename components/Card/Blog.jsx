@@ -19,7 +19,7 @@ export default function CardBlog({ item, isDragging }) {
           onClick={(e) => isDragging && e.preventDefault()}
           onPointerDownCapture={(e) => e.preventDefault()}
           className="body-lg line-clamp-1 capitalize after:absolute after:inset-0"
-          href={`/work/${item.uid}`}
+          href={`/blog/${item.uid}`}
         >
           {item.uid.split('-').join(' ')}
         </Link>
