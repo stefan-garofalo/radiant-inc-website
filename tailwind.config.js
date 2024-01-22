@@ -30,7 +30,8 @@ module.exports = {
       },
       aspectRatio: {
         work: '1.43',
-        blog: '1.77'
+        blog: '1.77',
+        cover: '1.88'
       },
       backgroundImage: {
         'gradient-to-208':

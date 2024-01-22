@@ -7,7 +7,7 @@ import SectionServices from '@/components/Sections/Services'
 import SectionBlog from '@/components/Sections/Blog'
 import SectionPress from '@/components/Sections/Press'
 
-export default async function Section() {
+export default async function HomePage() {
   const [page, works, services, posts, tags] = await Promise.all([
     prismic.getSingleton('homepage'),
     prismic.getCollection({ type: 'work' }),
