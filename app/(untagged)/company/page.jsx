@@ -4,7 +4,6 @@ import { PrismicRichText } from '@prismicio/react'
 
 export default async function CompanyPage() {
   const page = await prismic.getSingleton('company')
-  console.log(page)
   return (
     <main className="container">
       <section className="py-16 grid grid-cols-2">
