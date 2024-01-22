@@ -5,7 +5,6 @@ import SectionContact from '@/components/Sections/Contact'
 
 export default async function CompanyPage() {
   const page = await prismic.getSingleton('company')
-  console.log(page.data.milestones)
   return (
     <main className="container">
       <section className="py-16 grid grid-cols-2">
@@ -35,7 +34,7 @@ export default async function CompanyPage() {
           </ol>
         </div>
       </section>
-      <SectionContact/>
+      <SectionContact />
     </main>
   )
 }
