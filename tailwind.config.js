@@ -30,6 +30,7 @@ module.exports = {
         '66.5': '16.625rem',
       },
       aspectRatio: {
+        company: '1.10',
         work: '1.43',
         blog: '1.77',
         cover: '1.88'
