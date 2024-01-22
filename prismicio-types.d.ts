@@ -5,6 +5,150 @@ import type * as prismic from '@prismicio/client'
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 /**
+ * Item in *Company → milestones*
+ */
+export interface CompanyDocumentDataMilestonesItem {
+  /**
+   * date field in *Company → milestones*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.milestones[].date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField
+
+  /**
+   * title field in *Company → milestones*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.milestones[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+}
+
+type CompanyDocumentDataSlicesSlice = never
+
+/**
+ * Content for Company documents
+ */
+interface CompanyDocumentData {
+  /**
+   * title field in *Company*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * cover field in *Company*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.cover
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  cover: prismic.ImageField<never>
+
+  /**
+   * paragraph field in *Company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField
+
+  /**
+   * milestones_paragraph field in *Company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.milestones_paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  milestones_paragraph: prismic.RichTextField
+
+  /**
+   * milestones field in *Company*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.milestones[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  milestones: prismic.GroupField<Simplify<CompanyDocumentDataMilestonesItem>>
+
+  /**
+   * Slice Zone field in *Company*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<CompanyDocumentDataSlicesSlice> /**
+   * Meta Description field in *Company*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: company.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField
+
+  /**
+   * Meta Image field in *Company*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>
+
+  /**
+   * Meta Title field in *Company*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: company.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField
+}
+
+/**
+ * Company document from Prismic
+ *
+ * - **API ID**: `company`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CompanyDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+  Simplify<CompanyDocumentData>,
+  'company',
+  Lang
+>
+
+/**
  * Item in *homepage → Grid*
  */
 export interface HomepageDocumentDataGridItem {
@@ -438,7 +582,7 @@ export type WorkDocument<Lang extends string = string> = prismic.PrismicDocument
   Lang
 >
 
-export type AllDocumentTypes = HomepageDocument | PostDocument | ServiceDocument | WorkDocument
+export type AllDocumentTypes = CompanyDocument | HomepageDocument | PostDocument | ServiceDocument | WorkDocument
 
 declare module '@prismicio/client' {
   interface CreateClient {
@@ -447,6 +591,10 @@ declare module '@prismicio/client' {
 
   namespace Content {
     export type {
+      CompanyDocument,
+      CompanyDocumentData,
+      CompanyDocumentDataMilestonesItem,
+      CompanyDocumentDataSlicesSlice,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataGridItem,
