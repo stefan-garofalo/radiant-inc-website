@@ -67,6 +67,36 @@
         "config": {
           "choices": {}
         }
+      },
+      "press": {
+        "type": "Group",
+        "config": {
+          "label": "press",
+          "fields": {
+            "date": {
+              "type": "Date",
+              "config": {
+                "label": "date",
+                "placeholder": ""
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "url": {
+              "type": "Link",
+              "config": {
+                "label": "url",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
