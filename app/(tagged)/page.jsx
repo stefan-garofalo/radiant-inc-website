@@ -6,6 +6,7 @@ import SectionWorks from '@/components/Sections/Works'
 import SectionServices from '@/components/Sections/Services'
 import SectionBlog from '@/components/Sections/Blog'
 import SectionPress from '@/components/Sections/Press'
+import SectionContact from '@/components/Sections/Contact'
 
 export default async function HomePage() {
   const [page, works, services, posts, tags] = await Promise.all([
@@ -24,6 +25,7 @@ export default async function HomePage() {
       <SectionServices content={services} />
       <SectionBlog content={posts} />
       <SectionPress content={page.data.press} />
+      <SectionContact />
     </>
   )
 }

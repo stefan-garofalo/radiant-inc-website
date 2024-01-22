@@ -1,6 +1,7 @@
 import prismic from '@/lib/prismic'
 import Picture from '@/components/UI/Picture'
 import { PrismicRichText } from '@prismicio/react'
+import SectionContact from '@/components/Sections/Contact'
 
 export default async function CompanyPage() {
   const page = await prismic.getSingleton('company')
@@ -34,6 +35,7 @@ export default async function CompanyPage() {
           </ol>
         </div>
       </section>
+      <SectionContact/>
     </main>
   )
 }
