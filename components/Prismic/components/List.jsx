@@ -1,7 +1,6 @@
 import { PrismicRichText } from '@prismicio/react/dist/react-server/PrismicRichText'
 
 export default function List({ value, index }) {
-  console.log(value)
   return (
     <ul className="flex flex-col ml-auto w-3/5 px-14">
       {value.items.map((item, j) => (
