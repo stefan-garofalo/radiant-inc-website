@@ -13,6 +13,11 @@
 						}
 					}
 				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "half",
+				"type": "Text"
 			}
 		},
 		"items": []

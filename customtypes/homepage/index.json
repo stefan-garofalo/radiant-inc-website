@@ -61,13 +61,6 @@
           "repeat": false
         }
       },
-      "slices": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
-        "config": {
-          "choices": {}
-        }
-      },
       "press": {
         "type": "Group",
         "config": {
@@ -96,6 +89,36 @@
               }
             }
           }
+        }
+      },
+      "company_links": {
+        "type": "Group",
+        "config": {
+          "label": "Company links",
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "description",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
         }
       }
     },
