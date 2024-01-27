@@ -40,6 +40,8 @@ module.exports = {
           'linear-gradient(190deg, var(--tw-gradient-stops));',
         'gradient-to-132':
           'linear-gradient(132deg, var(--tw-gradient-stops));',
+        'gradient-to-124': 
+          'linear-gradient(124deg, var(--tw-gradient-stops));',
       },
     },
   },

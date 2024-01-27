@@ -10,6 +10,7 @@ const colorMap = {
 export default function Button({
   tag = 'button',
   mode = 'dark',
+  arrow = true,
   children,
   className,
   ...props
@@ -20,12 +21,13 @@ export default function Button({
       className={`
         ${colorMap[mode]} 
         ${className}
-        inline-flex w-fit items-center gap-2 p-4 rounded-[14px] border transition-colors duration-300
+        ${arrow ? 'p-4 rounded-[14px]' : 'py-1 px-3.5 rounded-[30px] body-xl'}
+        inline-flex w-fit items-center gap-2 border transition-colors duration-300
       `}
       {...props}
     >
       {children}
-      <IconArrowRight className="size-8" />
+      {arrow && <IconArrowRight className="size-8" />}
     </Component>
   )
 }
