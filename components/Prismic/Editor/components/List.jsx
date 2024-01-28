@@ -1,4 +1,4 @@
-import { PrismicRichText } from '@prismicio/react/dist/react-server/PrismicRichText'
+import { PrismicRichText } from '@prismicio/react'
 
 export default function List({ value, index }) {
   return (
