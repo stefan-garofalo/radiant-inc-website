@@ -2,8 +2,8 @@ import ArrowTitle from '../ArrowTitle'
 import Button from '../UI/Button'
 
 const gradientList = [
-  'bg-gradient-to-124 dark:bg-gradient-to-r from-[#DCEFF0] dark:from-[#C8F2FD] to-[#524F4D] dark:to-[#DBFEE3]',
-  'bg-gradient-to-132 dark:bg-gradient-to-r from-[#3B3D35] dark:from-[#CDFDF5] to-[#DDD9D7] dark:to-[#56E1F9]',
+  'bg-gradient-to-124 dark:bg-gradient-to-r from-[#DCEFF0_-16.8%] dark:from-[#C8F2FD] to-[#524F4D_76.6%] dark:to-[#DBFEE3]',
+  'bg-gradient-to-132 dark:bg-gradient-to-r from-[#3B3D35_-2.99%] dark:from-[#CDFDF5] to-[#DDD9D7_107.43%] dark:to-[#56E1F9]',
   'bg-gradient-to-r from-[#999] dark:from-[#E0FEFE] to-[#000] dark:to-[#E0FCCE]',
 ]
 
