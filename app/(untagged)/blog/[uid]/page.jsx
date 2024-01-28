@@ -46,6 +46,7 @@ export default async function BlogPage({ params }) {
       <ol className="flex items-stretch gap-5">
         {[1, 2].map((_, i) => (
           <li
+            key={`nav-${i}`}
             className={`h-full w-full p-10 flex flex-col justify-between aspect-nav rounded-3xl ${gradientList[i]}`}
           >
             <span className="text-light-400 dark:text-dark-400">Title</span>
