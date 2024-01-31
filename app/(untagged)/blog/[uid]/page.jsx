@@ -12,6 +12,7 @@ const gradientList = [
 
 export default async function BlogPage({ params }) {
   const page = await prismic.getItem({ type: 'post', uid: params.uid })
+  console.log(page)
   return (
     <main className="py-16 mx-auto w-1/2 flex flex-col gap-y-16 body-xl">
       <div>
@@ -32,7 +33,7 @@ export default async function BlogPage({ params }) {
             </span>
           </span>
         </div>
-        <Picture image={page.data.cover} className="mt-6 aspect-cover rounded-3xl" />
+        <Picture image={page.data.cover} className="mt-6 aspect-cover rounded-3xl object-cover object-[0%_30%]" />
       </div>
       <PrismicRichText field={page.data.content} />
       <ol className="flex items-stretch gap-5">
