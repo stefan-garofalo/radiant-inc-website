@@ -12,7 +12,8 @@ const gradientList = [
 
 export default async function BlogPage({ params }) {
   const page = await prismic.getItem({ type: 'post', uid: params.uid })
-  console.log(page)
+  const [prev, next] = await prismic.getAdjacent({ type: 'post', id: page.id })
+  console.log(prev, next)
   return (
     <main className="py-16 mx-auto w-1/2 flex flex-col gap-y-16 body-xl">
       <div>
