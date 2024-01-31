@@ -27,22 +27,20 @@ module.exports = {
       spacing: {
         container: '2.5rem',
         18: '4.5rem',
-        '66.5': '16.625rem',
+        66.5: '16.625rem',
       },
       aspectRatio: {
         company: '1.10',
         work: '1.43',
         nav: '1.64',
         blog: '1.77',
-        cover: '1.88'
+        cover: '1.88',
       },
       backgroundImage: {
-        'gradient-to-208':
-          'linear-gradient(190deg, var(--tw-gradient-stops));',
-        'gradient-to-132':
-          'linear-gradient(132deg, var(--tw-gradient-stops));',
-        'gradient-to-124': 
-          'linear-gradient(124deg, var(--tw-gradient-stops));',
+        'gradient-to-347': 'linear-gradient(347deg, var(--tw-gradient-stops));',
+        'gradient-to-208': 'linear-gradient(208deg, var(--tw-gradient-stops));',
+        'gradient-to-132': 'linear-gradient(132deg, var(--tw-gradient-stops));',
+        'gradient-to-124': 'linear-gradient(124deg, var(--tw-gradient-stops));',
       },
     },
   },

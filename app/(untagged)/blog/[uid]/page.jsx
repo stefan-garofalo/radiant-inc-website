@@ -6,8 +6,8 @@ import { PrismicRichText } from '@prismicio/react'
 import Button from '@/components/UI/Button'
 
 const gradientList = [
-  'bg-gradient-to-132 dark:bg-gradient-to-r from-[#3B3D35_-2.99%] dark:from-[#CDFDF5] to-[#DDD9D7_107.43%] dark:to-[#56E1F9]',
-  'bg-gradient-to-132 dark:bg-gradient-to-r from-[#3B3D35_-2.99%] dark:from-[#CDFDF5] to-[#DDD9D7_107.43%] dark:to-[#56E1F9]',
+  'bg-gradient-to-132 dark:bg-gradient-to-347 from-[#3B3D35_-2.99%] dark:from-[#0F93FF_-105.12%] to-[#DDD9D7_107.43%] dark:to-[#F5FEE6_91%]',
+  'bg-gradient-to-t dark:bg-gradient-to-132 from-[#999] dark:from-[#A5FDCB] to-[#000] dark:to-[#CDFDE7]',
 ]
 
 export default async function BlogPage({ params }) {
@@ -15,14 +15,9 @@ export default async function BlogPage({ params }) {
   return (
     <main className="py-16 mx-auto w-1/2 flex flex-col gap-y-16 body-xl">
       <div>
-        <h1 className="title-md first-letter:capitalize">
-          {page.uid.split('-').join(' ')}
-        </h1>
+        <h1 className="title-md first-letter:capitalize">{page.uid.split('-').join(' ')}</h1>
         <div className="pt-4 flex items-stretch gap-4">
-          <Image
-            src={Avatar}
-            className="rounded-full aspect-square w-14 object-cover"
-          />
+          <Image src={Avatar} className="rounded-full aspect-square w-14 object-cover" />
           <span className="h-full flex flex-col">
             <span className="text-lg">John Doe</span>
             <span className="text-md text-light-200 dark:text-dark-200">
@@ -37,10 +32,7 @@ export default async function BlogPage({ params }) {
             </span>
           </span>
         </div>
-        <Picture
-          image={page.data.cover}
-          className="mt-6 aspect-cover rounded-3xl"
-        />
+        <Picture image={page.data.cover} className="mt-6 aspect-cover rounded-3xl" />
       </div>
       <PrismicRichText field={page.data.content} />
       <ol className="flex items-stretch gap-5">

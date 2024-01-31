@@ -26,7 +26,7 @@ export default async function HomePage() {
       <SectionServices content={services} />
       <SectionBlog content={posts} />
       <SectionPress content={page.data.press} />
-      <SectionCompany content={page.data.company_links}/>
+      <SectionCompany content={page.data.company_links} />
       <SectionContact />
     </>
   )
