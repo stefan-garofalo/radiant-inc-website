@@ -12,14 +12,29 @@ const gradientList = [
 
 export default async function BlogPage({ params }) {
   const page = await prismic.getItem({ type: 'post', uid: params.uid })
-  const [prev, next] = await prismic.getAdjacent({ type: 'post', id: page.id })
-  console.log(prev, next)
+  const [
+    {
+      results: [prev],
+    },
+    {
+      results: [next],
+    },
+  ] = await prismic.getAdjacent({
+    type: 'post',
+    id: page.id,
+  })
+
   return (
     <main className="py-16 mx-auto w-1/2 flex flex-col gap-y-16 body-xl">
       <div>
-        <h1 className="title-md first-letter:capitalize">{page.uid.split('-').join(' ')}</h1>
+        <h1 className="title-md first-letter:capitalize">
+          {page.uid.split('-').join(' ')}
+        </h1>
         <div className="pt-4 flex items-stretch gap-4">
-          <Image src={Avatar} className="rounded-full aspect-square w-14 object-cover" />
+          <Image
+            src={Avatar}
+            className="rounded-full aspect-square w-14 object-cover"
+          />
           <span className="h-full flex flex-col">
             <span className="text-lg">John Doe</span>
             <span className="text-md text-light-200 dark:text-dark-200">
@@ -34,21 +49,45 @@ export default async function BlogPage({ params }) {
             </span>
           </span>
         </div>
-        <Picture image={page.data.cover} className="mt-6 aspect-cover rounded-3xl object-cover object-[0%_30%]" />
+        <Picture
+          image={page.data.cover}
+          className="mt-6 aspect-cover rounded-3xl object-cover object-[0%_30%]"
+        />
       </div>
       <PrismicRichText field={page.data.content} />
-      <ol className="flex items-stretch gap-5">
-        {[1, 2].map((_, i) => (
+      <ol className="flex items-stretch justify-center gap-5">
+        {prev && (
           <li
-            key={`nav-${i}`}
-            className={`h-full w-full p-10 flex flex-col justify-between aspect-nav rounded-3xl ${gradientList[i]}`}
+            className={`h-full w-1/2 p-10 flex flex-col justify-between aspect-nav rounded-3xl bg-gradient-to-132 dark:bg-gradient-to-347 from-[#3B3D35_-2.99%] dark:from-[#0F93FF_-105.12%] to-[#DDD9D7_107.43%] dark:to-[#F5FEE6_91%]`}
           >
-            <span className="text-light-400 dark:text-dark-400">Title</span>
-            <Button tag="a" href="/blog" className="capitalize">
-              Link
+            <span className="text-light-400 dark:text-dark-400 body-xl leading-[1.1] first-letter:capitalize">
+              {prev.uid.split('-').join(' ')}
+            </span>
+            <Button
+              tag="a"
+              href={`/blog/${prev.uid}`}
+              className="capitalize !text-[22px] flex-row-reverse [&>svg]:rotate-180"
+            >
+              Prev
             </Button>
           </li>
-        ))}
+        )}
+        {next && (
+          <li
+            className={`h-full w-1/2 p-10 flex flex-col justify-between aspect-nav rounded-3xl bg-gradient-to-t dark:bg-gradient-to-132 from-[#999] dark:from-[#A5FDCB] to-[#000] dark:to-[#CDFDE7]`}
+          >
+            <span className="text-light-400 dark:text-dark-400 body-xl leading-[1.1] first-letter:capitalize">
+              {next.uid.split('-').join(' ')}
+            </span>
+            <Button
+              tag="a"
+              href={`/blog/${next.uid}`}
+              className="capitalize !text-[22px]"
+            >
+              Next
+            </Button>
+          </li>
+        )}
       </ol>
     </main>
   )

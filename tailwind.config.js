@@ -32,7 +32,7 @@ module.exports = {
       aspectRatio: {
         company: '1.10',
         work: '1.43',
-        nav: '1.64',
+        nav: '1.60',
         blog: '1.77',
         cover: '1.88',
       },
