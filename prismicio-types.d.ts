@@ -150,6 +150,53 @@ export type CompanyDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Header → Links*
+ */
+export interface HeaderDocumentDataLinksItem {
+  /**
+   * link field in *Header → Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Content for Header documents
+ */
+interface HeaderDocumentData {
+  /**
+   * Links field in *Header*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  links: prismic.GroupField<Simplify<HeaderDocumentDataLinksItem>>;
+}
+
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<HeaderDocumentData>,
+    "header",
+    Lang
+  >;
+
+/**
  * Item in *homepage → Grid*
  */
 export interface HomepageDocumentDataGridItem {
@@ -753,6 +800,7 @@ export type WorkDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CompanyDocument
+  | HeaderDocument
   | HomepageDocument
   | JobsDocument
   | PostDocument
@@ -1027,6 +1075,9 @@ declare module "@prismicio/client" {
       CompanyDocumentData,
       CompanyDocumentDataMilestonesItem,
       CompanyDocumentDataSlicesSlice,
+      HeaderDocument,
+      HeaderDocumentData,
+      HeaderDocumentDataLinksItem,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataGridItem,
