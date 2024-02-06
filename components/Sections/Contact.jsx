@@ -7,7 +7,7 @@ export default function SectionContact() {
         target="_blank"
         className="body-lg hover:opacity-50 transition-opacity duration-300"
       >
-        Please send inquiries to Agency Inc. From here
+        Please send inquiries to Radiant Inc. From here
       </a>
     </section>
   )
