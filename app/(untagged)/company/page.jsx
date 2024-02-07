@@ -8,7 +8,7 @@ export default async function CompanyPage() {
   return (
     <main className="container">
       <section className="py-16 grid grid-cols-2">
-        <h1 className="title-sm">Company</h1>
+        <h1 className="title-sm" id="company">Company</h1>
         <div className="flex flex-col gap-y-6 body-xl">
           <h2 className="title-md">{page.data.title}</h2>
           <Picture className="aspect-cover rounded-3xl" image={page.data.cover}></Picture>
@@ -16,7 +16,7 @@ export default async function CompanyPage() {
         </div>
       </section>
       <section className="py-18 grid grid-cols-2 body-xl">
-        <h2 className="title-sm">History</h2>
+        <h2 className="title-sm" id="history">History</h2>
         <div className="flex flex-col gap-y-6">
           <PrismicRichText field={page.data.milestones_paragraph}></PrismicRichText>
           <ol className="flex flex-col">

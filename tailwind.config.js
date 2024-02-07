@@ -10,6 +10,7 @@ module.exports = {
   },
   theme: {
     colors: {
+      current: 'currentColor',
       dark: {
         100: '#DADADA',
         200: '#848385',

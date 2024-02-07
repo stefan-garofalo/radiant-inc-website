@@ -150,6 +150,112 @@ export type CompanyDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Footer → Philosophy nav*
+ */
+export interface FooterDocumentDataPhilosophyNavItem {
+  /**
+   * Link field in *Footer → Philosophy nav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.philosophy_nav[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * label field in *Footer → Philosophy nav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.philosophy_nav[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Footer → Company nav*
+ */
+export interface FooterDocumentDataCompanyNavItem {
+  /**
+   * Link field in *Footer → Company nav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_nav[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * label field in *Footer → Company nav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_nav[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Philosophy nav field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.philosophy_nav[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  philosophy_nav: prismic.GroupField<
+    Simplify<FooterDocumentDataPhilosophyNavItem>
+  >;
+
+  /**
+   * Company nav field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_nav[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  company_nav: prismic.GroupField<Simplify<FooterDocumentDataCompanyNavItem>>;
+
+  /**
+   * Address field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
+/**
  * Item in *Header → Links*
  */
 export interface HeaderDocumentDataLinksItem {
@@ -800,6 +906,7 @@ export type WorkDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CompanyDocument
+  | FooterDocument
   | HeaderDocument
   | HomepageDocument
   | JobsDocument
@@ -1075,6 +1182,10 @@ declare module "@prismicio/client" {
       CompanyDocumentData,
       CompanyDocumentDataMilestonesItem,
       CompanyDocumentDataSlicesSlice,
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataPhilosophyNavItem,
+      FooterDocumentDataCompanyNavItem,
       HeaderDocument,
       HeaderDocumentData,
       HeaderDocumentDataLinksItem,
