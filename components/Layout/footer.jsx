@@ -10,7 +10,7 @@ export default async function LayoutFooter() {
   const footer = await prismic.getSingleton('footer')
   return (
     <footer className="container py-container-lg flex flex-col gap-y-6 border-t border-light-300 dark:border-dark-300">
-      <nav className="grid grid-cols-4">
+      <nav className="grid grid-cols-2 lg:grid-cols-4">
         <div>
           <span className="body-lg flex gap-x-2">
             <span>Company</span>
@@ -56,16 +56,16 @@ export default async function LayoutFooter() {
           </ul>
         </div>
       </nav>
-      <div className="w-1/12 pt-8 flex flex-col body-sm">
+      <div className="w-1/4 lg:w-1/12 pt-8 flex flex-col body-sm">
         <span>Radiant Inc.</span>
         <span className="break-words text-light-200 dark:text-dark-200">
           {footer.data.address}
         </span>
       </div>
       <span className="title-sm">Radiant Inc.</span>
-      <div className="pt-6 grid grid-cols-3 body-xs text-light-200 dark:text-dark-200 border-t border-current">
-        <span>© 2023 Radiant Inc. All Rights Reserved.</span>
-        <ul className="flex items-center justify-center gap-3">
+      <div className="pt-6 flex justify-between items-center lg:grid lg:grid-cols-3 body-xs text-light-200 dark:text-dark-200 border-t border-current">
+        <span className="w-1/3 lg:w-full">© 2023 Radiant Inc. All Rights Reserved.</span>
+        <ul className="w-1/3 lg:w-full flex items-center justify-center gap-3">
           <li>
             <a
               href="https://facebook.com"
@@ -96,7 +96,7 @@ export default async function LayoutFooter() {
         </ul>
         <a
           href="https://google.com"
-          className="ml-auto hover:opacity-50 transition-opacity duration-300"
+          className="w-1/3 lg:w-full text-end ml-auto hover:opacity-50 transition-opacity duration-300"
         >
           Privacy Policy
         </a>
