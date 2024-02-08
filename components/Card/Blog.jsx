@@ -7,7 +7,7 @@ import DateDisplay from '../UI/DateDisplay'
 export default function CardBlog({ item, isDragging }) {
   return (
     <figure className="relative hover:opacity-40 transition-opacity duration-300">
-      <div className="aspect-blog h-66.5 rounded-2xl overflow-hidden">
+      <div className="aspect-blog h-48 lg:h-66.5 rounded-2xl overflow-hidden">
         <Picture
           className="w-full h-full object-cover"
           image={item.data.cover}
