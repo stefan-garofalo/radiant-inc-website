@@ -9,9 +9,9 @@ export default async function LayoutHeader() {
       <Link href="/">Radiant Inc.</Link>
       <nav>
         <ol className="flex items-center gap-5">
-          {header.data.links.map((item) => (
+          {header.data.links.map((item, i) => (
             <li
-              key={item.id}
+              key={`menu-${i}`}
               className="hover:opacity-50 transition-opacity duration-300 capitalize"
             >
               {item.link.link_type === 'Web' ? (
