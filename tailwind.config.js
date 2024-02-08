@@ -26,7 +26,7 @@ module.exports = {
     },
     extend: {
       spacing: {
-        'container-mb': '1rem',
+        'container': '1rem',
         'container-lg': '2.5rem',
         18: '4.5rem',
         66.5: '16.625rem',

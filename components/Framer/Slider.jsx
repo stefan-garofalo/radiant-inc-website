@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef } from 'react'
+import { useMediaQuery } from '@reactuses/core'
 import { motion } from 'framer-motion'
 
 export default function Slider({ title, items, card, className, ...props }) {
@@ -11,8 +12,9 @@ export default function Slider({ title, items, card, className, ...props }) {
   const [slidesWidth, setSlidesWidths] = useState(0)
   const [isOverflowing, setIsOverflowing] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
+  const isDesktop = useMediaQuery('(min-width: 1024px)', true)
 
-  const slideMarginRight = 22.5
+  const slideMarginRight = isDesktop ? 22.5 : 18
   const totalSlidesMarginRight = slideMarginRight * items.length
   const CardComponent = card
 
@@ -72,7 +74,7 @@ export default function Slider({ title, items, card, className, ...props }) {
         {items.map((item, index) => (
           <li
             key={`slide-${index}`}
-            className="shrink-0 last:mr-container-lg first:ml-container-lg"
+            className="shrink-0 last:mr-container last:lg:mr-container-lg first:ml-container first:lg:ml-container-lg"
           >
             <CardComponent item={item} isDragging={isDragging} />
           </li>
