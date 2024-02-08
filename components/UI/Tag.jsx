@@ -23,7 +23,7 @@ export default function Tag({ children, mode = 'dark', className, ...props }) {
   return (
     <button
       className={`
-        px-3.5 py-1 rounded-[30px] text-xl whitespace-nowrap border transition-all duration-300 
+        px-3.5 py-1 rounded-[30px] body-lg lg:text-xl whitespace-nowrap border transition-all duration-300 
         ${colorMap[mode]} 
         ${className}
         ${

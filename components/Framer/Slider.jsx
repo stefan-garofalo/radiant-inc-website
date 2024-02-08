@@ -72,7 +72,7 @@ export default function Slider({ title, items, card, className, ...props }) {
         {items.map((item, index) => (
           <li
             key={`slide-${index}`}
-            className="shrink-0 last:mr-container first:ml-container"
+            className="shrink-0 last:mr-container-lg first:ml-container-lg"
           >
             <CardComponent item={item} isDragging={isDragging} />
           </li>

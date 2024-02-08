@@ -9,7 +9,7 @@ import IconInstagram from '@/components/icons/Instagram'
 export default async function LayoutFooter() {
   const footer = await prismic.getSingleton('footer')
   return (
-    <footer className="container py-container flex flex-col gap-y-6 border-t border-light-300 dark:border-dark-300">
+    <footer className="container py-container-lg flex flex-col gap-y-6 border-t border-light-300 dark:border-dark-300">
       <nav className="grid grid-cols-4">
         <div>
           <span className="body-lg flex gap-x-2">
