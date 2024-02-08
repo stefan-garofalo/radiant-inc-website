@@ -21,7 +21,7 @@ export default function Button({
       className={`
         ${colorMap[mode]} 
         ${className}
-        ${arrow ? 'p-4 rounded-[14px] body-xl lg:title-xs' : 'py-1 px-3.5 rounded-[30px] body-sm lg:body-xl'}
+        ${arrow ? 'p-3 lg:p-4 rounded-[14px] body-xl lg:title-xs' : 'py-1 px-3.5 rounded-[30px] body-sm lg:body-xl'}
         inline-flex w-fit items-center gap-2 border transition-colors duration-300
       `}
       {...props}

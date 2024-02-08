@@ -14,19 +14,19 @@ export default function SectionServices({ content }) {
         {content.map((item, i) => (
           <li
             key={`service-${i}`}
-            className={`container py-8 rounded-3xl flex flex-col gap-y-[4.625rem] ${backgroundList[i]}`}
+            className={`container py-8 rounded-3xl flex flex-col gap-y-14 lg:gap-y-[4.625rem] ${backgroundList[i]}`}
           >
-            <span className="title-lg">{item.data.title}</span>
-            <div className="grid grid-cols-2 gap-10">
+            <span className="title-sm lg:title-lg">{item.data.title}</span>
+            <div className="grid lg:grid-cols-2 gap-10">
               <Button
                 tag="Link"
                 href={`/services#${item.uid}`}
-                className="h-fit"
+                className="h-fit order-last lg:order-first"
               >
                 Service
               </Button>
               <div className="flex flex-col gap-y-4">
-                <ul className="w-11/12 flex flex-wrap gap-y-4 gap-x-3.5">
+                <ul className="w-11/12 flex flex-wrap gap-x-1 gap-y-1.5 lg:gap-y-4 lg:gap-x-3.5">
                   {item.tags.map((tag, j) => (
                     <li key={`service-${i}-tag-${j}`}>
                       <Tag>{tag}</Tag>
