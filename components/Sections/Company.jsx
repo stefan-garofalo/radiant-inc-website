@@ -9,7 +9,7 @@ const gradientList = [
 
 export default function SectionCompany({ content }) {
   return (
-    <section className="container py-8 flex flex-col gap-5">
+    <section className="container py-8 flex flex-col gap-8">
       <div className="flex flex-col gap-y-6 lg:flex-row lg:items-center lg:justify-between">
         <ArrowTitle>Company</ArrowTitle>
         <div className="flex items-center gap-2 lg:gap-3.5">
