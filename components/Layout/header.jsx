@@ -5,7 +5,7 @@ export default async function LayoutHeader() {
   const header = await prismic.getSingleton('header')
 
   return (
-    <header className="container py-6 flex items-center justify-between body-xl hover:opacity-50 transition-opacity duration-300">
+    <header className="container py-6 flex items-center justify-between body-mdsty lg:body-xl hover:opacity-50 transition-opacity duration-300">
       <Link href="/">Radiant Inc.</Link>
       <nav>
         <ol className="flex items-center gap-5">
