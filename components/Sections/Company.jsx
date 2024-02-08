@@ -10,9 +10,9 @@ const gradientList = [
 export default function SectionCompany({ content }) {
   return (
     <section className="container py-8 flex flex-col gap-5">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-y-6 lg:flex-row lg:items-center lg:justify-between">
         <ArrowTitle>Company</ArrowTitle>
-        <div className="flex items-center gap-3.5">
+        <div className="flex items-center gap-2 lg:gap-3.5">
           <Button
             tag="a"
             href="https://dictionary.cambridge.org/dictionary/english/partner"
@@ -33,13 +33,13 @@ export default function SectionCompany({ content }) {
           </Button>
         </div>
       </div>
-      <ul className="grid grid-cols-3 gap-5">
+      <ul className="grid lg:grid-cols-3 gap-5">
         {content.map((item, i) => (
           <li
             className={`aspect-company w-full rounded-3xl p-10 flex flex-col justify-between ${gradientList[i]}`}
             key={`company-${i}`}
           >
-            <span className="title-sm text-light-400 dark:text-dark-400">
+            <span className="text-4xl lg:title-sm text-light-400 dark:text-dark-400">
               {item.description}
             </span>
             <Button tag="a" href={`/${item.link.type}`} className="capitalize">
