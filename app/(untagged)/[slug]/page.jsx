@@ -3,7 +3,7 @@ import prismic from '@/lib/prismic'
 import PrismicEditor from '@/components/Prismic'
 
 export function generateStaticParams() {
-  return [{ slug: 'team' }, { slug: 'jobs' }, { slug: 'company' }]
+  return [{ slug: 'team' }, { slug: 'jobs' }]
 }
 
 export default async function SlugPage({ params }) {
