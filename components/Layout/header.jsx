@@ -5,8 +5,13 @@ export default async function LayoutHeader() {
   const header = await prismic.getSingleton('header')
 
   return (
-    <header className="container py-6 flex items-center justify-between body-mdsty lg:body-xl hover:opacity-50 transition-opacity duration-300">
-      <Link href="/">Radiant Inc.</Link>
+    <header className="container py-6 flex items-center justify-between body-mdsty lg:body-xl ">
+      <Link
+        href="/"
+        className="hover:opacity-50 transition-opacity duration-300"
+      >
+        Radiant Inc.
+      </Link>
       <nav>
         <ol className="flex items-center gap-5">
           {header.data.links.map((item, i) => (
