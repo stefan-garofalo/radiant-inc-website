@@ -1,8 +1,18 @@
 import prismic from '@/lib/prismic'
+import metadata from '@/lib/metadata'
+
 import Tag from '@/components/UI/Tag'
 import SectionWorks from '@/components/Sections/Works'
 import { PrismicRichText } from '@prismicio/react'
 import SectionContact from '@/components/Sections/Contact'
+
+export function generateMetadata() {
+  return metadata.generate({
+    title: 'Services',
+    excerpt: `Discover Radiant Inc's services and how we can help you contribute to the radiant future that awaits us.`,
+    canonical: '/services',
+  })
+}
 
 export default async function ServicesPage() {
   const [services, works] = await Promise.all([

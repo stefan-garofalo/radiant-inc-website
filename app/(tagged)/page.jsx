@@ -1,4 +1,5 @@
 import prismic from '@/lib/prismic'
+import metadata from '@/lib/metadata'
 
 import SectionHero from '@/components/Sections/Hero'
 import SectionGrid from '@/components/Sections/Grid'
@@ -8,6 +9,17 @@ import SectionBlog from '@/components/Sections/Blog'
 import SectionPress from '@/components/Sections/Press'
 import SectionContact from '@/components/Sections/Contact'
 import SectionCompany from '@/components/Sections/Company'
+
+export async function generateMetadata() {
+  const page = await prismic.getSingleton('homepage')
+
+  return metadata.generate({
+    title: page.data.meta_title,
+    excerpt: page.data.meta_description,
+    image: page.data.meta_image,
+    canonical: '/',
+  })
+}
 
 export default async function HomePage() {
   const [page, works, services, posts, tags] = await Promise.all([

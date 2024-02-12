@@ -1,7 +1,20 @@
 import prismic from '@/lib/prismic'
-import Picture from '@/components/UI/Picture'
+import metadata from '@/lib/metadata'
+
 import { PrismicRichText } from '@prismicio/react'
+import Picture from '@/components/UI/Picture'
 import SectionContact from '@/components/Sections/Contact'
+
+export async function generateMetadata() {
+  const page = await prismic.getSingleton('company')
+
+  return metadata.generate({
+    title: page.data.meta_title,
+    excerpt: page.data.meta_description,
+    image: page.data.meta_image,
+    canonical: '/company',
+  })
+}
 
 export default async function CompanyPage() {
   const page = await prismic.getSingleton('company')
