@@ -4,7 +4,9 @@ import { PrismicRichText } from '@prismicio/react'
 import SectionContact from '@/components/Sections/Contact'
 
 export async function generateStaticParams() {
-  return []
+  const works = await prismic.getCollection({ type: 'work' })
+  return works.results.map((work) => ({ slug: work.uid }))
+  
 }
 
 export default async function WorkPage({ params }) {
