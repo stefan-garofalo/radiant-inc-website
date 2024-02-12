@@ -5,7 +5,7 @@ import SectionContact from '@/components/Sections/Contact'
 
 export async function generateStaticParams() {
   const works = await prismic.getCollection({ type: 'work' })
-  return works.results.map((work) => ({ slug: work.uid }))
+  return works.map((work) => ({ slug: work.uid }))
   
 }
 
