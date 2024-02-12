@@ -14,7 +14,7 @@ export default async function WorkPage({ params }) {
   const header = [
     {
       label: 'Project type',
-      content: page.data.service_type.uid.split('-').join(' '),
+      content: page.data?.service_type?.uid?.split('-').join(' '),
     },
     {
       label: 'Timeline',
