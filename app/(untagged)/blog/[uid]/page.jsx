@@ -5,10 +5,9 @@ import Picture from '@/components/UI/Picture'
 import { PrismicRichText } from '@prismicio/react'
 import Button from '@/components/UI/Button'
 
-const gradientList = [
-  'bg-gradient-to-132 dark:bg-gradient-to-347 from-[#3B3D35_-2.99%] dark:from-[#0F93FF_-105.12%] to-[#DDD9D7_107.43%] dark:to-[#F5FEE6_91%]',
-  'bg-gradient-to-t dark:bg-gradient-to-132 from-[#999] dark:from-[#A5FDCB] to-[#000] dark:to-[#CDFDE7]',
-]
+export async function generateStaticParams() {
+  return []
+}
 
 export default async function BlogPage({ params }) {
   const page = await prismic.getItem({ type: 'post', uid: params.uid })

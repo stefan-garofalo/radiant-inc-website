@@ -3,6 +3,10 @@ import Picture from '@/components/UI/Picture'
 import { PrismicRichText } from '@prismicio/react'
 import SectionContact from '@/components/Sections/Contact'
 
+export async function generateStaticParams() {
+  return []
+}
+
 export default async function WorkPage({ params }) {
   const page = await prismic.getItem({ type: 'work', uid: params.slug })
   const header = [
@@ -55,7 +59,7 @@ export default async function WorkPage({ params }) {
           </div>
         </section>
       ))}
-      <SectionContact/>
+      <SectionContact />
     </main>
   )
 }
