@@ -6,7 +6,6 @@ import SectionContact from '@/components/Sections/Contact'
 export async function generateStaticParams() {
   const works = await prismic.getCollection({ type: 'work' })
   return works.map((work) => ({ slug: work.uid }))
-  
 }
 
 export default async function WorkPage({ params }) {
@@ -55,6 +54,7 @@ export default async function WorkPage({ params }) {
               <Picture
                 key={`gallery-${key}-${i}`}
                 image={item.image}
+                priority
                 className="rounded-3xl aspect-blog w-full object-cover"
               />
             ))}
