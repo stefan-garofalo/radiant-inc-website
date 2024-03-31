@@ -31,8 +31,8 @@ export default async function WorkPage({ params }) {
 
   return (
     <main className="container">
-      <h1 className="title-lg py-16">{page.data.title}</h1>
-      <div className="grid grid-cols-3 gap-10 pb-10">
+      <h1 className="text-[60px] lg:title-lg py-16">{page.data.title}</h1>
+      <div className="grid lg:grid-cols-3 gap-x-10 gap-y-5 pb-10">
         {header.map((item, i) => (
           <div key={`head-${i}`} className="flex flex-col">
             <span className="text-light-200 dark:text-dark-200 uppercase body-lg">
@@ -44,7 +44,7 @@ export default async function WorkPage({ params }) {
       </div>
       {content.map((key) => (
         <section
-          className="grid grid-cols-3 gap-10 py-10 border-t border-light-200 dark:border-dark-200"
+          className="grid lg:grid-cols-3 gap-5 lg:gap-10 py-10 border-t border-light-200 dark:border-dark-200"
           key={`section-${key}`}
         >
           <h2 className="capitalize title-sm">{key}</h2>
