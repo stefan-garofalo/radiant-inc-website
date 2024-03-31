@@ -25,19 +25,19 @@ export default async function BlogPage({ params }) {
   })
 
   return (
-    <main className="py-16 mx-auto w-1/2 flex flex-col gap-y-16 body-xl">
+    <main className="py-16 mx-auto w-11/12 lg:w-1/2 flex flex-col gap-y-16 body-xl">
       <div>
-        <h1 className="title-md first-letter:capitalize">
+        <h1 className="title-sm lg:title-md first-letter:capitalize">
           {page.uid.split('-').join(' ')}
         </h1>
-        <div className="pt-4 flex items-stretch gap-4">
+        <div className="pt-6 lg:pt-4 flex items-stretch gap-4">
           <Image
             src={Avatar}
-            className="rounded-full aspect-square w-14 object-cover"
+            className="shrink-0 rounded-full aspect-square w-14 object-cover"
           />
           <span className="h-full flex flex-col">
-            <span className="text-lg">John Doe</span>
-            <span className="text-md text-light-200 dark:text-dark-200">
+            <span className="body-lg">John Doe</span>
+            <span className="body-md text-light-200 dark:text-dark-200">
               {new Date(page.last_publication_date).toLocaleString('en-GB', {
                 weekday: 'long',
                 year: 'numeric',
@@ -55,10 +55,10 @@ export default async function BlogPage({ params }) {
         />
       </div>
       <PrismicRichText field={page.data.content} />
-      <ol className="flex items-stretch justify-center gap-5">
+      <ol className="flex flex-col lg:flex-row items-stretch justify-center gap-5">
         {prev && (
           <li
-            className={`h-full w-1/2 p-10 flex flex-col justify-between aspect-nav rounded-3xl bg-gradient-to-132 dark:bg-gradient-to-347 from-[#3B3D35_-2.99%] dark:from-[#0F93FF_-105.12%] to-[#DDD9D7_107.43%] dark:to-[#F5FEE6_91%]`}
+            className={`h-full lg:w-1/2 p-10 flex flex-col justify-between aspect-nav rounded-3xl bg-gradient-to-132 dark:bg-gradient-to-347 from-[#3B3D35_-2.99%] dark:from-[#0F93FF_-105.12%] to-[#DDD9D7_107.43%] dark:to-[#F5FEE6_91%]`}
           >
             <span className="text-light-400 dark:text-dark-400 body-xl leading-[1.1] first-letter:capitalize">
               {prev.uid.split('-').join(' ')}
@@ -74,7 +74,7 @@ export default async function BlogPage({ params }) {
         )}
         {next && (
           <li
-            className={`h-full w-1/2 p-10 flex flex-col justify-between aspect-nav rounded-3xl bg-gradient-to-t dark:bg-gradient-to-132 from-[#999] dark:from-[#A5FDCB] to-[#000] dark:to-[#CDFDE7]`}
+            className={`h-full lg:w-1/2 p-10 flex flex-col justify-between aspect-nav rounded-3xl bg-gradient-to-t dark:bg-gradient-to-132 from-[#999] dark:from-[#A5FDCB] to-[#000] dark:to-[#CDFDE7]`}
           >
             <span className="text-light-400 dark:text-dark-400 body-xl leading-[1.1] first-letter:capitalize">
               {next.uid.split('-').join(' ')}
