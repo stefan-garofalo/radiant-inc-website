@@ -9,12 +9,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const page = await prismic.getSingleton(params.slug)
-  console.log(metadata.generate({
-    title: page.data.meta_title,
-    excerpt: page.data.meta_description,
-    image: page.data.meta_image,
-    canonical: `/${params.slug}`,
-  }))
+
   return metadata.generate({
     title: page.data.meta_title,
     excerpt: page.data.meta_description,
