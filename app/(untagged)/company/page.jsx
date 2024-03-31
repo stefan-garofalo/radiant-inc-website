@@ -20,7 +20,7 @@ export default async function CompanyPage() {
   const page = await prismic.getSingleton('company')
   return (
     <main className="container">
-      <section className="8 lg:py-16 grid lg:grid-cols-2 gap-y-5">
+      <section className="py-8 lg:py-16 grid lg:grid-cols-2 gap-y-5">
         <h1 className="title-xs lg:title-sm" id="company">Company</h1>
         <div className="flex flex-col gap-y-6 body-lg lg:body-xl">
           <h2 className="title-sm lg:title-md">{page.data.title}</h2>
