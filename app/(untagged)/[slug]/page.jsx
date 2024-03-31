@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
 export default async function SlugPage({ params }) {
   const page = await prismic.getSingleton(params.slug)
   return (
-    <main className="py-16 flex flex-col gap-y-12">
+    <main className="py-16 flex flex-col gap-y-16 lg:gap-y-12">
       <PrismicEditor slices={page.data.slices} />
     </main>
   )
