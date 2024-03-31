@@ -2,9 +2,9 @@ import prismic from '@/lib/prismic'
 
 import Link from 'next/link'
 import IconArrowRight from '@/components/icons/ArrowRight'
-import IconFacebook from '@/components/icons/Facebook'
 import IconTwitter from '@/components/icons/Twitter'
-import IconInstagram from '@/components/icons/Instagram'
+import IconGithub from '@/components/icons/Github'
+import IconFigma from '@/components/icons/Figma'
 
 export default async function LayoutFooter() {
   const footer = await prismic.getSingleton('footer')
@@ -68,25 +68,25 @@ export default async function LayoutFooter() {
         <ul className="w-1/3 lg:w-full flex items-center justify-center gap-3">
           <li>
             <a
-              href="https://facebook.com"
+              href="https://www.figma.com/file/0ulzWeqbCedfrPvqnL7quD/Agency-Service-Website-(Community)?type=design&node-id=5-2197&mode=design&t=RztPvxyW6JXyRwyk-0"
               target="_blank"
               className="hover:opacity-50 transition-opacity duration-300"
             >
-              <IconFacebook className="size-4 fill-current text-current" />
+              <IconFigma className="size-4 fill-current text-current" />
             </a>
           </li>
           <li>
             <a
-              href="https://instagram.com"
+              href="https://github.com/stefan-garofalo"
               target="_blank"
               className="hover:opacity-50 transition-opacity duration-300"
             >
-              <IconInstagram className="size-4 fill-current text-current" />
+              <IconGithub className="size-4 fill-current text-current" />
             </a>
           </li>
           <li>
             <a
-              href="https://x.com"
+              href="https://twitter.com/stefangarofalo"
               target="_blank"
               className="hover:opacity-50 transition-opacity duration-300"
             >
