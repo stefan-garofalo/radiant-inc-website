@@ -22,16 +22,16 @@ export default async function ServicesPage() {
 
   return (
     <main className="">
-      <h1 className="container py-16 title-lg">Services</h1>
+      <h1 className="container py-16 title-md lg:title-lg">Services</h1>
       {services.map((service, i) => (
-        <section key={`service-${i}`} className="grid grid-cols-2 py-8">
+        <section key={`service-${i}`} className="flex flex-col lg:grid lg:grid-cols-2 py-8 gap-5 lg:gap-0">
           <h2
             id={service.uid}
-            className="pl-container-lg title-sm scroll-mt-16"
+            className="pl-container lg:pl-container-lg title-sm lg:scroll-mt-16"
           >
             {service.data.title}
           </h2>
-          <div className="flex flex-col gap-y-4 pr-container-lg">
+          <div className="flex flex-col gap-y-4 pl-container lg:pl-0 lg:pr-container-lg">
             <ul className="flex gap-x-2 gap-y-3 flex-wrap">
               {service.tags.map((tag, j) => (
                 <li key={`service-${i}-tag-${j}`}>
