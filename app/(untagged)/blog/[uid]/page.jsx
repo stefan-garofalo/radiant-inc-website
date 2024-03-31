@@ -6,8 +6,7 @@ import { PrismicRichText } from '@prismicio/react'
 import Button from '@/components/UI/Button'
 
 export async function generateStaticParams() {
-  const posts = await prismic.getCollection({ type: 'post' })
-  return posts.map((post) => ({ uid: post.uid }))
+  return []
 }
 
 export default async function BlogPage({ params }) {

@@ -4,7 +4,7 @@ import metadata from '@/lib/metadata'
 import PrismicEditor from '@/components/Prismic'
 
 export function generateStaticParams() {
-  return [{ slug: 'team' }, { slug: 'jobs' }]
+  return []
 }
 
 export async function generateMetadata({ params }) {
